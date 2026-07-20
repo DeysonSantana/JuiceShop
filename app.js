@@ -79,7 +79,8 @@ app.post('/message', (req, res) => {
     });
 });
 
-// Inicia o servidor
-app.listen(3000, () => {
-    console.log('Servidor vulnerável rodando em http://localhost:3000');
+// Substitua as últimas linhas do app.js por:
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Servidor vulnerável rodando na porta ${PORT}`);
 });
