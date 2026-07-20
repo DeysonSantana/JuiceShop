@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
         res.send(`
             <html>
             <body style="font-family: Arial, sans-serif; padding: 20px;">
-                <h1>Sistema Interno (Vulnerável)</h1>
+                <h1>Sistema Interno</h1>
                 
                 <div style="background: #fee; padding: 10px; border: 1px solid red; max-width: 300px;">
                     <h3>Login de Administrador</h3>
