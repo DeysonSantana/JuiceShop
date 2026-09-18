@@ -8,6 +8,8 @@ app.use(express.urlencoded({ extended: true }));
 // Cria um banco de dados SQLite em memória (apaga ao reiniciar o servidor)
 const db = new sqlite3.Database(':memory:');
 
+// const db = new sqlite3.Database('./banco.sqlite');
+
 // Popula o banco com usuários e mensagens de teste
 db.serialize(() => {
     db.run("CREATE TABLE users (id INT, username TEXT, password TEXT)");
@@ -80,7 +82,7 @@ app.post('/message', (req, res) => {
 });
 
 // Substitua as últimas linhas do app.js por:
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log(`Servidor vulnerável rodando na porta ${PORT}`);
 });
